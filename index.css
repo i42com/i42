@@ -1,29 +1,48 @@
-body {background-color: #000}
-
-#console {
-    font-family: courier, monospace;
-    color: #fff;
-    width: 750px;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 100px;
-    font-size: 14px;
+:root {
+	background-color: #000 !important;
 }
 
-a {color: #0bc; text-decoration: none;}
+body {
+	background-color: #000
+}
 
-#a {color: #0f0;}
+#console {
+	font-family: courier, monospace;
+	color: #fff;
+	width:750px;
+	margin-left:auto;
+	margin-right:auto;
+	margin-top:100px;
+	font-size:14px;
+}
 
-#c {color: #0bc;}
+a {
+	color: #0bc;
+	text-decoration: none;
+}
 
-#b {color: #ff0096;}
+#a {
+	color: #0f0;
+}
 
-#k {animation: change 1s;}
+#c {
+	color: #0bc;
+}
 
-#op{color: #888888}
+#b {
+	color: #ff0096;
+}
+
+#k {
+    	animation: change 1s;
+}
+
+#op{
+    	color: #888888
+}
 
 @keyframes change {
-    0% { color: #0f0; }
-    50% { color: #0f0; }
-    99% { color: black; }
+    	0%  { color:  #0f0; }
+    	50% { color:  #0f0; }
+    	99% { color: black; }
 }
