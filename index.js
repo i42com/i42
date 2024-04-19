@@ -1,121 +1,89 @@
-var Typer = {
-    text: '',
-    accessCountimer: null,
-    index: 0,
-    speed: 2,
-    file: '',
-    accessCount: 0,
-    deniedCount: 0,
-    init: function () {
-        accessCountimer = setInterval(function () {
-            Typer.updLstChr();
-        }, 500);
-        $.get(Typer.file, function (data) {
-            Typer.text = data;
-            Typer.text = Typer.text.slice(0, Typer.text.length - 1);
-        });
-    },
+class Typer {
+    constructor() {
+        this.text = '';
+        this.index = 0;
+        this.speed = 3;
+        this.file = 'i42.txt';
+        this.accessCount = 0;
+        this.deniedCount = 0;
+        this.consoleElement = document.getElementById('console');
+        this.init();
+    }
 
-    content: function () {
-        return $('#console').html();
-    },
+    init() {
+        setInterval(() => this.updLstChr(), 500);
+        fetch(this.file)
+            .then(response => response.text())
+            .then(data => {
+                this.text = data.slice(0, -1);
+            });
+        document.onkeydown = this.handleKeyDown.bind(this);
+    }
 
-    write: function (str) {
-        $('#console').append(str);
-        return false;
-    },
+    content() {
+        return this.consoleElement.innerHTML;
+    }
 
-    addText: function (key) {
-        if (key.keyCode == 18) {
-            Typer.accessCount++;
+    write(str) {
+        this.consoleElement.innerHTML += str;
+    }
 
-            if (Typer.accessCount >= 3) {
-                Typer.makeAccess();
+    addText(key) {
+        if ([18, 20].includes(key.keyCode)) {
+            const countProp = key.keyCode === 18 ? 'accessCount' : 'deniedCount';
+            this[countProp]++;
+            if (this[countProp] >= 3) {
+                this[key.keyCode === 18 ? 'makeAccess' : 'makeDenied']();
             }
-        } else if (key.keyCode == 20) {
-            Typer.deniedCount++;
-
-            if (Typer.deniedCount >= 3) {
-                Typer.makeDenied();
+        } else if (key.keyCode === 27) {
+            this.hidepop();
+        } else if (this.text) {
+            let content = this.content();
+            if (content.endsWith('|')) {
+                this.consoleElement.innerHTML = content.slice(0, -1);
             }
-        } else if (key.keyCode == 27) {
-            Typer.hidepop();
-        } else if (Typer.text) {
-            var cont = Typer.content();
-            if (cont.substring(cont.length - 1, cont.length) == '|')
-                $('#console').html(
-                    $('#console')
-                        .html()
-                        .substring(0, cont.length - 1),
-                );
-            if (key.keyCode != 8) {
-                Typer.index += Typer.speed;
-            } else {
-                if (Typer.index > 0) Typer.index -= Typer.speed;
-            }
-            var text = Typer.text.substring(0, Typer.index);
-            var rtn = new RegExp('\n', 'g');
-
-            $('#console').html(text.replace(rtn, '<br/>'));
+            this.index += (key.keyCode !== 8 ? this.speed : Math.max(0, this.index - this.speed));
+            const text = this.text.substring(0, this.index).replace(/\n/g, '<br/>');
+            this.consoleElement.innerHTML = text;
             window.scrollBy(0, 50);
         }
 
-        if (key.preventDefault && key.keyCode != 122) {
+        if (key.preventDefault && key.keyCode !== 122) {
             key.preventDefault();
         }
-
-        if (key.keyCode != 122) {
-            // otherway prevent keys default behavior
+        if (key.keyCode !== 122) {
             key.returnValue = false;
         }
-    },
+    }
 
-    updLstChr: function () {
-        var cont = this.content();
+    updLstChr() {
+        let content = this.content();
+        this.consoleElement.innerHTML = content.endsWith('|') ? content.slice(0, -1) : content + '|';
+    }
 
-        if (cont.substring(cont.length - 1, cont.length) == '|')
-            $('#console').html(
-                $('#console')
-                    .html()
-                    .substring(0, cont.length - 1),
-            );
-        else this.write('|'); // else write it
-    },
-};
+    handleKeyDown(e) {
+        if (e.keyCode === 27) { // Fast forward text
+            this.index = this.text.length;
+        }
+    }
+}
+
+const typer = new Typer();
 
 function replaceUrls(text) {
-    var http = text.indexOf('http://');
-    var space = text.indexOf('.me ', http);
+    const httpPos = text.indexOf('http://');
+    const spacePos = text.indexOf('.me ', httpPos);
 
-    if (space != -1) {
-        var url = text.slice(http, space - 1);
-        return text.replace(url, '<a href="' + url + '">' + url + '</a>');
-    } else {
-        return text;
+    if (spacePos !== -1) {
+        const url = text.slice(httpPos, spacePos - 1);
+        return text.replace(url, `<a href="${url}">${url}</a>`);
     }
+    return text;
 }
 
-Typer.speed = 3;
-Typer.file = 'i42.txt';
-Typer.init();
-
-var timer = setInterval('t();', 30);
-function t() {
-    Typer.addText({keyCode: 123748});
-
-    if (Typer.index > Typer.text.length) {
+let timer = setInterval(() => {
+    typer.addText({keyCode: 123748});
+    if (typer.index > typer.text.length) {
         clearInterval(timer);
     }
-
-}
-
-document.onkeydown = function (e) {
-    if (e.keyCode == 27) {
-        // fastforward text 
-        Typer.index = Typer.text.length;
-    }
-}
-
-
-
-
+}, 30);
