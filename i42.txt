@@ -1,13 +1,17 @@
-<span id="a">i42</span>:<span id="b">~</span><span id="c">$</span> cd i42/<!-- kjsdfhkjdhsfkjdshfkj -->About_Us
-<span id="a">i42</span>:<span id="b">~</span><span id="c">$</span> cat <!-- kjsdfhkjdhsfkjdshfkj -->i42.txt<br/><br/>
-"<span id="k">In the beginning, there was Information</span>". <!-- sjkfhskjf -->
+<span id="a">i42</span>:<span id="b">~</span><span id="c">$</span> cd i42/
+<span id="a">i42</span>:<span id="b">~</span><span id="c">$</span> cat i42.txt<br/><br/>
 
-Everything is information, and every piece of information can be turned into code.<!-- laglaglaglaglaglaglaglaglaglaglaglag --><p>You can see that, this is how your portfolio would look like.</p>
-<p>You can introduce yourself here.</p> <!-- ksjdokhdfgdufdfkjhfkjahdfkjhafkjhakf -->
-<p> You can also tell what you've worked and known and what skills you have, you can also give link to your professional portfolio here<a href="link"> portfolio</a>.</p><!-- kjdhjhgdgldjhgdwtoiewotwotjdfkjdfffsf -->
-<p>Tell more about yourself. <br><br><br>Give your project links or something like that. <a href="link"> Here you go</a>.</p><!-- hsdgfhjfkdjhfkjsdhfkjdshfkjsdhfkjsdhkfjhdskjfhksdjhfkdsj -->
-<p> You can give links to other professional profiles you have on Internet, here: <br> <a href="link1">Profile1</a> <br> <a href="link2">Profile2</a> and <br> <a href="link3">Profile3</a>.</p>
+<p>In the beginning, there was Information.</p>
+<p>Everything is information, and every piece of information can be turned into code.</p>
+<p>As the physical and digital worlds blend with exponential speed, the evolution of both technology and humanity becomes one.</p>
+<p>Tech-enabled advancements will become essential to life itself.</p>
+<p>New technologies emerge to redefine boundaries.</p>
+<p>Innovation is a force of nature, brutally and unstoppable.</p>
+<p>The most innovative and adaptive technologies will determine our collective future.</p>
+<p>Modern Problems require modern solutions and this is where agile venture building and investing function as a crucial tool to strengthen the social fabric of our society.</p>
+<p>Guiding the development of innovation for a sustainable future creates a world where everyone thrives.</p>
+<p>At the intersection of God's creation and our own ability to create, we need to navigate the complexities of shaping a future where technology not only empowers but also preserves the essence of humanity.</p>
+<p>Creative Minds, a deliberate data-driven decision-making approach and Capital will ultimately achieve this.</p>
 
-You can also give your email ID for contacting you<!-- slightdelayhere-->, feel free to send me an email at<!-- longlonglongcomment --><a href="Your email ID">Email</a>.
-
-<p>Cheers!</p>
+<p>Mail: <a href="mailto:contact@i42.com">contact@i42.com</a></p>
+<p>Telegram: <a href="https://t.me/satoshi">@satoshi</a></p>
