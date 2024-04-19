@@ -13,7 +13,7 @@
 <p style="margin-bottom: 5px;">At the intersection of God's creation and our own ability to create, we need to navigate the complexities of shaping a future where technology not only empowers but also preserves the essence of humanity.</p>
 <p style="margin-bottom: 5px;">Creative Minds, a deliberate data-driven decision-making approach and Capital will ultimately achieve this.</p>
 
-<p style="margin-bottom: 2px;">Mail: <a href="mailto:contact@i42.com">contact@i42.com</a>
-<p>Telegram: <a href="https://t.me/satoshi">@satoshi</a></p>
+<p style="margin-bottom: 0px;">Mail: <a href="mailto:contact@i42.com">contact@i42.com</a></p>
+<p style="margin-top: 0px;">Telegram: <a href="https://t.me/satoshi">@satoshi</a></p>
 
-<span id="a">i42</span>:<exit id="b">~</span><span id="c">$</span> cd i42/
+<span id="a">exit</span>:<span id="b">~</span><span id="c">$</span> cd i42/
