@@ -1,0 +1,19 @@
+<span id="a">i42</span>:<span id="b">~</span><span id="c">$</span> cd i42/
+<span id="a">i42</span>:<span id="b">~</span><span id="c">$</span> cat i42.txt<br/>
+
+<p style="margin-bottom: 5px;">In the beginning, there was Information.</p>
+<p style="margin-bottom: 5px;">Everything is information, and every piece of information can be turned into code.</p>
+<p style="margin-bottom: 5px;">As the physical and digital worlds blend with exponential speed, the evolution of both technology and humanity becomes one.</p>
+<p style="margin-bottom: 5px;">Tech-enabled advancements will become essential to life itself.</p>
+<p style="margin-bottom: 5px;">New technologies emerge to redefine boundaries.</p>
+<p style="margin-bottom: 5px;">Innovation is a force of nature, brutally and unstoppable.</p>
+<p style="margin-bottom: 5px;">The most innovative and adaptive technologies will determine our collective future.</p>
+<p style="margin-bottom: 5px;">Modern Problems require modern solutions and this is where agile venture building and investing function as a crucial tool to strengthen the social fabric of our society.</p>
+<p style="margin-bottom: 5px;">Guiding the development of innovation for a sustainable future creates a world where everyone thrives.</p>
+<p style="margin-bottom: 5px;">At the intersection of God's creation and our own ability to create, we need to navigate the complexities of shaping a future where technology not only empowers but also preserves the essence of humanity.</p>
+<p style="margin-bottom: 5px;">Creative Minds, a deliberate data-driven decision-making approach and Capital will ultimately achieve this.</p>
+
+<p style="margin-bottom: 0px;">Mail: <a href="mailto:contact@i42.com">contact@i42.com</a></p>
+<p style="margin-top: 0px;">Telegram: <a href="https://t.me/satoshi">@satoshi</a></p>
+
+<span id="a">exit</span>:<span id="b">~</span><span id="c">$</span> cd i42/

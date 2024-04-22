@@ -1,0 +1,70 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  background-color: #000 !important;
+}
+
+html {
+  font-size: 14px;
+}
+
+body {
+  background-color: #000;
+}
+
+#console {
+  font-family: courier, monospace;
+  color: #fff;
+  max-width: 750px;
+  width: 100%;
+  margin: 7.2rem auto auto;
+  font-size: 1rem;
+  padding: 1.5rem;
+}
+
+@media all and (max-width: 720px) {
+  #console {
+    margin-top: 3rem;
+  }
+}
+
+a {
+  color: #0bc;
+  text-decoration: none;
+}
+
+#a {
+  color: #0f0;
+}
+
+#c {
+  color: #0bc;
+}
+
+#b {
+  color: #ff0096;
+}
+
+#k {
+  animation: change 1s;
+}
+
+#op {
+  color: #888888;
+}
+
+@keyframes change {
+  0% {
+    color: #0f0;
+  }
+  50% {
+    color: #0f0;
+  }
+  99% {
+    color: black;
+  }
+}
